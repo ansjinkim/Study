@@ -67,4 +67,14 @@ Copy-Item -Path Post\VM.Models.Post.VisualizationImpl.dll -Destination ansys.mot
 Copy-Item -Path Post\VM.Post.API.OutputReader.dll -Destination ansys.motion.post_api
 Copy-Item -Path Post\VMUtil.dll -Destination ansys.motion.post_api
 
+Copy-Item -Path scripts\conanfile.py -Destination ansys.motion.post_api
+
 Remove-Item -Path "Post" -Force -Recurse
+
+& "$env:ANSYS_CONAN_VENV_PATH\Scripts\activate.ps1"
+
+conan remove -f ansys.motion.post_api
+
+cd ansys.motion.post_api
+
+conan export-pkg . ansys.motion.post_api/24.1@ansys/stable -pr windows_x86_64_vs2019 -pr release -s os=Windows
