@@ -1,1 +1,5 @@
-Expand-Archive -Path ansys.motion.post_api.zip -DestinationPath ansys.motion.post_api
+Expand-Archive -Path Post.zip -DestinationPath Post
+
+Copy-Item -Path Post\Resources\DataSource.db -Destination ansys.motion.post_api\Resources
+
+Remove-Item -Path "Post" -Force -Recurse
