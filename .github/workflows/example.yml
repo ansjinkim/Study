@@ -4,7 +4,11 @@ on:
 jobs:
   job1:
     runs-on: self-hosted
+    defaults:
+      run:
+        shell: pwsh
     steps:
-      - uses: actions/checkout@v2
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Download
+        uses: actions/checkout@v2
+      - name: run script
+        run: .\scripts\create_conan.ps1
