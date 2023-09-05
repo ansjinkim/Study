@@ -79,4 +79,6 @@ cd ansys.motion.post_api
 
 conan export-pkg . ansys.motion.post_api/24.1@ansys/stable -pr windows_x86_64_vs2019 -pr release -s os=Windows
 
+cd..
+
 git clone -n --depth=1 -b develop https://tfs.ansys.com:8443/tfs/ANSYS_Development/Mechanical/_git/mechext-virtualmotion
