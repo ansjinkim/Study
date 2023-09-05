@@ -1,5 +1,7 @@
 Expand-Archive -Path Post.zip -DestinationPath Post
 
+Remove-Item -Path "ansys.motion.post_api" -Force -Recurse
+
 New-Item -ItemType Directory -Path ansys.motion.post_api
 New-Item -ItemType Directory -Path ansys.motion.post_api\Resources
 New-Item -ItemType Directory -Path ansys.motion.post_api\x64
