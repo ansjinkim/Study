@@ -81,4 +81,4 @@ conan export-pkg . ansys.motion.post_api/24.1@ansys/stable -pr windows_x86_64_vs
 
 cd..
 
-git clone https://tfs.ansys.com:8443/tfs/ANSYS_Development/Mechanical/_git/mechext-virtualmotion
+#git clone https://tfs.ansys.com:8443/tfs/ANSYS_Development/Mechanical/_git/mechext-virtualmotion
