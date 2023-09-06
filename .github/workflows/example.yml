@@ -12,3 +12,7 @@ jobs:
         uses: actions/checkout@v2
       - name: run script
         run: .\scripts\create_conan.ps1
+      - uses: actions/upload-artifact@v3
+      with:
+        name: ansys.motion.post_api
+        path: ansys.motion.post_api.zip
